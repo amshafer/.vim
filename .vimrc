@@ -4,11 +4,6 @@ set notitle
 
 set number
 
-notitleset tabstop=8
-set softtabstop=4
-set shiftwidth=4
-" Do not set "expandtabs", it will prevent you from properly formatting code.
-set noexpandtab
 
 "
 " Ctrl+w opens a split window
