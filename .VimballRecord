@@ -1,0 +1,1 @@
+DrawIt.vba: call delete('/.amd/svl-enghomes003-cf1-7/vol/home7/homes7/skhanna/.vim/plugin/DrawItPlugin.vim')|call delete('/.amd/svl-enghomes003-cf1-7/vol/home7/homes7/skhanna/.vim/plugin/cecutil.vim')|call delete('/.amd/svl-enghomes003-cf1-7/vol/home7/homes7/skhanna/.vim/autoload/DrawIt.vim')|call delete('/.amd/svl-enghomes003-cf1-7/vol/home7/homes7/skhanna/.vim/doc/DrawIt.txt')
