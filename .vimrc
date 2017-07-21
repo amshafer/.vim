@@ -3,19 +3,19 @@ set tags=$SRC_HOME/tags
 set notitle
 
 set number
-
+syntax on
 
 "
 " Ctrl+w opens a split window
 "
-"nmap <C-w> :sp
+nmap <C-\> :vsplit
 
 
-colorscheme paintbox
+"colorscheme paintbox
 "colorscheme impact
 "colorscheme darkblue
 "colorscheme zenburn
-"colorscheme evening
+colorscheme evening
 "colorscheme koehler
 "colorscheme morning
 "colorscheme PaperColor
