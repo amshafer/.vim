@@ -814,6 +814,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("ShowMarksHLu", s:yellow, s:background, "none")
     call <SID>X("ShowMarksHLm", s:aqua, s:background, "none")
 
+
+
+" Highlight Class and Function names
+" syn match    cCustomParen    "(" contains=cParen,cCppParen
+syn match    cCustomFunc       /\w\+\s*(/me=e-1,he=e-1
+" syn match    cCustomScope    "::"
+" syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
+call <SID>X("cCustomFunc", s:red, "", "")
+
 	" Delete Functions
 	delf <SID>X
 	delf <SID>rgb
@@ -824,4 +833,5 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	delf <SID>grey_colour
 	delf <SID>grey_level
 	delf <SID>grey_number
+
 endif

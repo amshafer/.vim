@@ -25,8 +25,15 @@ colorscheme evening
 " which look okay on a light background, but unbearable on a dark background.
 " The following changes the C statements to green, and comments to `brown' which
 " looks like more like dull yellow to me
-hi Statement    term=bold cterm=NONE ctermfg=DarkGreen ctermbg=NONE gui=bold guifg=#ffff60 guibg=NONE
-hi Comment      term=bold cterm=NONE ctermfg=Cyan      ctermbg=NONE gui=bold guifg=#ffff60 guibg=NONE
+"hi Statement    term=bold cterm=NONE ctermfg=DarkGreen ctermbg=NONE gui=bold guifg=#ffff60 guibg=NONE
+"hi Comment      term=bold cterm=NONE ctermfg=Grey      ctermbg=NONE gui=bold guifg=#ffff60 guibg=NONE
+
+" Highlight Class and Function names
+" syn match    cCustomParen    "(" contains=cParen,cCppParen
+" syn match    cCustomFunc     "\w\+\s*(" contains=cCustomParen
+" syn match    cCustomScope    "::"
+" syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
+"hi cCustomFunc term=bold cterm=NONE ctermfg=DarkGreen      ctermbg=NONE gui=bold guifg=#ffff60 guibg=NONE
 
 "let g:solarized_termcolors=16
 "let g:solarized_visibility=high
