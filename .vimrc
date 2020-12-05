@@ -2,22 +2,23 @@ set showmode
 set tags=$SRC_HOME/tags
 set notitle
 
+set hidden
 set number
 syntax on
+filetype plugin indent on
 
 "
 " Ctrl+w opens a split window
 "
-nmap <C-\> :vsplit
-
+nmap <C-x> :vsplit
 
 "colorscheme paintbox
 "colorscheme impact
 "colorscheme darkblue
 "colorscheme zenburn
-colorscheme evening
+" THIS ONE: colorscheme evening
 "colorscheme koehler
-"colorscheme morning
+colorscheme morning
 "colorscheme PaperColor
 "colorscheme greens
 
@@ -71,3 +72,13 @@ inoremap <C-K> <Esc>lDa
 inoremap <C-U> <Esc>d0xi
 inoremap <C-Y> <Esc>Pa
 inoremap <C-X><C-S> <Esc>:w<CR>a
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rls']
+    \}
+
+" add bindings for LCS
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
+nnoremap <silent> <A-2> :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> gs :call LanguageClient#workspace_symbol()<CR>
