@@ -16,9 +16,9 @@ nmap <C-x> :vsplit
 "colorscheme impact
 "colorscheme darkblue
 "colorscheme zenburn
-" THIS ONE: colorscheme evening
+colorscheme evening
 "colorscheme koehler
-colorscheme morning
+" colorscheme morning
 "colorscheme PaperColor
 "colorscheme greens
 
