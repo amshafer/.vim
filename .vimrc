@@ -62,6 +62,8 @@ set listchars+=tab:^-
 set listchars+=trail:`
 
 " Mimic Emacs Line Editing in Insert Mode Only
+" make autocomplet Ctrl-Space
+inoremap <C-Space> <C-n>
 inoremap <C-A> <Home>
 inoremap <C-B> <Left>
 inoremap <C-E> <End>
@@ -82,3 +84,4 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
 nnoremap <silent> <A-2> :call LanguageClient#textDocument_rename()<CR>
 nnoremap <silent> gs :call LanguageClient#workspace_symbol()<CR>
+set completefunc=LanguageClient#complete
