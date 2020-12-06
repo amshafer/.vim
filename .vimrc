@@ -75,8 +75,21 @@ inoremap <C-U> <Esc>d0xi
 inoremap <C-Y> <Esc>Pa
 inoremap <C-X><C-S> <Esc>:w<CR>a
 
+" notmuch keybindings
+let g:notmuch_rb_custom_search_maps = {
+	\ 't':		'search_tag("+to-do -inbox")',
+	\ }
+
+let g:notmuch_rb_custom_show_maps = {
+	\ 't':		'show_tag("+to-do -inbox")',
+	\ }
+
+" LCS configuration
+"  right now only supports rust
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rls']
+    \ 'rust': ['rls'],
+    \ 'c': ['ccls'],
+    \ 'cpp': ['ccls'],
     \}
 
 " add bindings for LCS
@@ -85,3 +98,4 @@ nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
 nnoremap <silent> <A-2> :call LanguageClient#textDocument_rename()<CR>
 nnoremap <silent> gs :call LanguageClient#workspace_symbol()<CR>
 set completefunc=LanguageClient#complete
+set formatexpr=LanguageClient#textDocument_rangeFormatting_sync()
