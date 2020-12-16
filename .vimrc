@@ -7,6 +7,10 @@ set number
 syntax on
 filetype plugin indent on
 
+" add our rust path in case it's missing
+set path+=/home/ashafer/.cargo/bin
+let g:rustfmt_autosave=1
+
 "
 " Ctrl+w opens a split window
 "

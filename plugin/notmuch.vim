@@ -57,7 +57,7 @@ let s:notmuch_folders_default = [
 let s:notmuch_date_format_default = '%d.%m.%y'
 let s:notmuch_datetime_format_default = '%d.%m.%y %H:%M:%S'
 let s:notmuch_reader_default = 'mutt -f %s'
-let s:notmuch_sendmail_default = 'sendmail'
+let s:notmuch_sendmail_default = 'msmtp'
 let s:notmuch_folders_count_threads_default = 0
 
 function! s:new_file_buffer(type, fname)
