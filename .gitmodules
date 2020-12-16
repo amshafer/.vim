@@ -1,3 +1,6 @@
 [submodule "pack/plugins/start/LanguageClient-neovim"]
 	path = pack/plugins/start/LanguageClient-neovim
 	url = https://github.com/autozimu/LanguageClient-neovim
+[submodule "pack/plugins/start/rust.vim"]
+	path = pack/plugins/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
